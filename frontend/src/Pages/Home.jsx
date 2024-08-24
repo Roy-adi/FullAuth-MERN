@@ -18,7 +18,7 @@ const Home = () => {
       const token = localStorage.getItem("accessToken");
 
       const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/userDetails",
+        "/api/v1/auth/userDetails",
         {}, // You can pass signupData here if needed
         {
           headers: {
@@ -45,7 +45,7 @@ const Home = () => {
     setIsLoading(true); // Set loading state to true when API call starts
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/forget-password",
+        "/api/v1/auth/forget-password",
         {
           email: userData?.email,
         }

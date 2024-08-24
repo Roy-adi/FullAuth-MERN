@@ -24,7 +24,7 @@ const Login = () => {
     setIsLoading(true); // Set loading state to true when API call starts
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/login",
+        "/api/v1/auth/login",
         {
           ...signupData,
         }

@@ -50,7 +50,7 @@ const EmailVerificationPage = () => {
 	const verificationCall = async (verificationCode) => {
   setisLoading(true); // Set loading state to true when API call starts
   try {
-    const response = await axios.post('http://localhost:5000/api/v1/auth/verfymail', {
+    const response = await axios.post('/api/v1/auth/verfymail', {
       code : verificationCode
     });
    if (response.status === 200) {
